@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>Product</title>
+  <th:block th:replace="layout/head :: head" />
+</head>
+<body>
+<div class="be-wrapper be-fixed-sidebar">
+      <!--navbar-->
+
+  <th:block th:replace="layout/navbar :: navbar" />
+
+       <!--     -->
+
+       <!--sideber-->a
+  <th:block th:replace="layout/sidebar :: sideber" />
+
+  <!--     -->
+
+    <!--  content-->
+  <div class="be-content">
+<!--    <div class="row">-->
+      <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Bordered table</h4>
+            <p class="card-description">
+              Add class <code>.table-bordered</code>
+            </p>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Full name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Address</th>
+                </tr>
+                </thead>
+                <tbody>
+                  <th:block th:each="item : ${products}">
+                    <tr>
+                      <td th:text="${item.id}"></td>
+                      <td th:text="${item.name}"></td>
+                      <td th:text="${item.email}"></td>
+                      <td th:text="${item.phone}"></td>
+                      <td th:text="${item.address}"></td>
+                    </tr>
+                  </th:block>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    <th:block th:replace="layout/data-table :: data-table" />
+
+
+    <!--    </div>-->
+  </div>
+<!--    -->
+
+<!--  script-->
+<!--  <th:block th:replace="layout/script :: script" />-->
+
+<!--    -->
+</div>
+<th:block th:replace="layout/js-data-table :: js-data-table" />
+</body>
+</html>
