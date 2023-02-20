@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="spring_ajax_banking_location:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>spring_ajax_banking_location</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="banking_spring_ajax_location-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="spring_ajax_banking_location:war exploded" />
+    </root>
+  </artifact>
+</component>
